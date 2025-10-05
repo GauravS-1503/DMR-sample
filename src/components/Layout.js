@@ -31,8 +31,7 @@ export default function Layout(children, active="#/"){
             h("input",{className:"input", placeholder:"Quick search…", oninput:(e)=>{
               const ev = new CustomEvent('global-search',{ detail: e.target.value.trim() });
               window.dispatchEvent(ev);
-            }}),
-            h("a",{href:"https://github.com/", target:"_blank", className:"btn ghost"},"GitHub")
+            }})
           ])
         ]),
         h("section",{className:"content"},[children])
